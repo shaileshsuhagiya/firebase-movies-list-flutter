@@ -38,14 +38,14 @@ Widget movieListTile(Result data) {
           ),
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.only(left: 20),
+              padding: const EdgeInsets.only(left: 12,right: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(data.title ?? "-", style: const TextStyle(color: AppColor.textColor,fontSize: 16,  fontWeight: FontWeight.w500, overflow: TextOverflow.ellipsis),maxLines: 1,),
                   const SizedBox(height: 5,),
-                  Text(data.overview ?? "-",maxLines: 3,overflow: TextOverflow.ellipsis),
+                  Text(data.overview ?? "-",maxLines: 4,overflow: TextOverflow.ellipsis),
                 ],
               ),
             ),
