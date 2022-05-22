@@ -1,3 +1,4 @@
+///useCases for common API base helper
 abstract class ApiBaseHelper {
   Future<dynamic> get(
       {required String url});

@@ -9,17 +9,13 @@ import 'package:mvvm_demo/src/movie_functionality/services/user_service/movie_se
 
 class MovieServiceImplementation extends MovieService{
   final ApiBaseHelper _apiBaseHelper = dependencyAssembler<ApiBaseHelper>();
-
+ /// Here we handle API data and Failure response of the API
   @override
   Future<List<Result>> getDiscoverMovie()async {
     try {
       final response = await _apiBaseHelper.get(
           url: Config.discoverMovie);
-      print("data is ${response}");
-      List<MovieModel> userList = [];
-      MovieModel userDetailsModel = MovieModel.fromJson(response);
-
-      return userDetailsModel.results!;
+      return  MovieModel.fromJson(response).results!;
     } on Failure catch (failure) {
       throw failure;
     } catch (e) {

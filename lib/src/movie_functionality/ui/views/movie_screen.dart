@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mvvm_demo/src/movie_functionality/business_logic/models/movie_model.dart';
 import 'package:provider/provider.dart';
 import 'package:mvvm_demo/src/movie_functionality/business_logic/enums/view_state.dart';
-import 'package:mvvm_demo/src/movie_functionality/business_logic/view_models/user_view_model.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/view_models/movie_view_model.dart';
 import 'package:mvvm_demo/src/movie_functionality/services/dependency_assembler_education.dart';
 import 'package:mvvm_demo/src/movie_functionality/ui/shared/no_internet_connection_scaffold.dart';
 import '../widgets/movie_tile.dart';
@@ -16,11 +16,12 @@ class MovieScreen extends StatefulWidget {
 }
 
 class _MovieScreenState extends State<MovieScreen> {
-
+  ///Accessing service objects like REST API clients or databases so that they easily can be mocked
   final MovieViewModel _movieViewModel = dependencyAssembler<MovieViewModel>();
 
   @override
   void initState() {
+    ///For API Call
     getUser();
     super.initState();
   }
@@ -31,14 +32,14 @@ class _MovieScreenState extends State<MovieScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<MovieViewModel>.value(
-      value: _movieViewModel,
-      child: Consumer<MovieViewModel>(
-        builder: (BuildContext context, MovieViewModel model, Widget? child) {
-          return Scaffold(
-            backgroundColor: Colors.white,
-            appBar:AppBar(title: const Text("Popular Moview")) ,
-            body: _movieViewModel.state == ViewState.Busy
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(title: const Text("Popular Movie")),
+      body: ChangeNotifierProvider<MovieViewModel>.value(
+        value: _movieViewModel,
+        child: Consumer<MovieViewModel>(
+          builder: (BuildContext context, MovieViewModel model, Widget? child) {
+            return _movieViewModel.state == ViewState.Busy
                 ? const Center(child: CircularProgressIndicator())
                 : Center(
                     child: _movieViewModel.movieList!.fold((failure) {
@@ -56,9 +57,9 @@ class _MovieScreenState extends State<MovieScreen> {
                         },
                       );
                     }),
-                  ),
-          );
-        },
+                  );
+          },
+        ),
       ),
     );
   }

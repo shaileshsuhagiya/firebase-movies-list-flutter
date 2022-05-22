@@ -9,11 +9,10 @@ class DioConnectivityRequestRetrier {
 
   Future<Response> scheduleRequestRetry(RequestOptions requestOptions) async {
     final responseCompleter = Completer<Response>();
-    final options = new Options(
+    final options = Options(
       method: requestOptions.method,
       headers: requestOptions.headers,
     );
-
 
     return responseCompleter.future;
   }

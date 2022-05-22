@@ -13,6 +13,7 @@ class MovieViewModel extends BaseModel {
 
   Either<Failure, List<Result>>? _movieList;
 
+  ///Handle Error and Result using Datrz
   Either<Failure, List<Result>>? get movieList => _movieList;
 
   Future<void>  getMovieData()  async {
