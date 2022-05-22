@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:mvvm_demo/main.dart';
-import 'package:mvvm_demo/src/user_functionality/ui/views/movie_screen.dart';
+import 'package:mvvm_demo/src/movie_functionality/ui/views/movie_screen.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {

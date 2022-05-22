@@ -1,10 +1,10 @@
-import 'package:mvvm_demo/src/user_functionality/services/dependency_assembler_education.dart';
-import 'package:mvvm_demo/src/user_functionality/services/web_verbs/api_base_helper.dart';
+import 'package:mvvm_demo/src/movie_functionality/services/dependency_assembler_education.dart';
+import 'package:mvvm_demo/src/movie_functionality/services/web_verbs/api_base_helper.dart';
 import 'package:mvvm_demo/src/configs/app_configurations.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/failure.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/movie_model.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/utils/exception_utility.dart';
-import 'package:mvvm_demo/src/user_functionality/services/user_service/movie_service.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/failure.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/movie_model.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/utils/exception_utility.dart';
+import 'package:mvvm_demo/src/movie_functionality/services/user_service/movie_service.dart';
 
 
 class MovieServiceImplementation extends MovieService{

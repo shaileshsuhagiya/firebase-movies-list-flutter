@@ -5,8 +5,8 @@ import 'package:mvvm_demo/src/configs/app_configurations.dart';
 import 'package:mvvm_demo/src/core/helpers/app_exception.dart';
 import 'package:mvvm_demo/src/core/helpers/dio_connectivity_request_retrier.dart';
 import 'package:mvvm_demo/src/core/helpers/retry_interceptor.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/utils/exception_utility.dart';
-import 'package:mvvm_demo/src/user_functionality/services/web_verbs/api_base_helper.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/utils/exception_utility.dart';
+import 'package:mvvm_demo/src/movie_functionality/services/web_verbs/api_base_helper.dart';
 
 class ApiBaseHelperImplementation extends ApiBaseHelper {
   final Dio _dio = Dio(

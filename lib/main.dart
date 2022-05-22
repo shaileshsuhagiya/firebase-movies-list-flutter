@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_demo/src/user_functionality/services/dependency_assembler_education.dart'
+import 'package:mvvm_demo/src/movie_functionality/services/dependency_assembler_education.dart'
     as user;
-import 'src/user_functionality/ui/views/movie_screen.dart';
+import 'src/movie_functionality/ui/views/movie_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/movie_model.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/movie_model.dart';
 import 'package:provider/provider.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/enums/view_state.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/view_models/user_view_model.dart';
-import 'package:mvvm_demo/src/user_functionality/services/dependency_assembler_education.dart';
-import 'package:mvvm_demo/src/user_functionality/ui/shared/no_internet_connection_scaffold.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/enums/view_state.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/view_models/user_view_model.dart';
+import 'package:mvvm_demo/src/movie_functionality/services/dependency_assembler_education.dart';
+import 'package:mvvm_demo/src/movie_functionality/ui/shared/no_internet_connection_scaffold.dart';
 import '../widgets/movie_tile.dart';
 
 class MovieScreen extends StatefulWidget {

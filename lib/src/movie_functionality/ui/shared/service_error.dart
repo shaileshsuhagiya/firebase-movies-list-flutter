@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:mvvm_demo/src/constant/lottile_paths.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/failure.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/failure.dart';
 
 class ServiceError extends StatefulWidget {
   final Function? onTryAgain;

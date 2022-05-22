@@ -1,8 +1,8 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/failure.dart';
-import 'package:mvvm_demo/src/user_functionality/ui/shared/service_error.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/failure.dart';
+import 'package:mvvm_demo/src/movie_functionality/ui/shared/service_error.dart';
 
 class NoInternetConnectionScaffold extends StatelessWidget {
   final Function? onTryAgain;

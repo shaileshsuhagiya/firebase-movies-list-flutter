@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'package:dio/dio.dart';
-import 'package:mvvm_demo/src/user_functionality/business_logic/models/failure.dart';
+import 'package:mvvm_demo/src/movie_functionality/business_logic/models/failure.dart';
 
 
 Failure getCurrentFailure(error) {
