@@ -37,7 +37,7 @@ class _MovieScreenState extends State<MovieScreen> {
         builder: (BuildContext context, MovieViewModel model, Widget? child) {
           return Scaffold(
             backgroundColor: Colors.white,
-            appBar:AppBar(title: const Text("User List")) ,
+            appBar:AppBar(title: const Text("Popular Moview")) ,
             body: _movieViewModel.state == ViewState.Busy
                 ? const Center(child: CircularProgressIndicator())
                 : Center(
